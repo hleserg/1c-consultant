@@ -1,0 +1,19 @@
+# Образец путей к данным. Скопируйте в data-paths.local.yaml и заполните
+# своими абсолютными путями. Реальный файл (data-paths.local.yaml) — в .gitignore,
+# данные и пути никогда не попадают в репозиторий.
+
+# Конфигурации 1С (можно несколько). Для каждой — выгрузка в XML и её расширения.
+configurations:
+  - name: "ERP"
+    xml_path: "/absolute/path/to/erp-config-dump"      # Конфигуратор → Выгрузить конфигурацию в файлы
+    extensions_paths:
+      - "/absolute/path/to/extension-1"                # выгрузки расширений (CFE), если есть
+      # - "/absolute/path/to/extension-2"
+
+# Документация
+its_docs_path: "/absolute/path/to/offline-its"         # развёрнутая офлайн-версия 1С:ИТС
+platform_docs_path: null                               # доки платформы (или null, если пока нет)
+
+# Справочные спецификации форматов 1С (репозиторий cc-1c-skills, MIT).
+# Можно не указывать, если спеки завендорены в reference/1c-specs/ (задача 0d).
+cc_1c_skills_path: null                                # "/absolute/path/to/cc-1c-skills" или null
